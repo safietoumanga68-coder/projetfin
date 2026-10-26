@@ -5,18 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
 <body>
     <!-- entête -->
-    <div class="bg-green-950  text-amber-50">
-        <h1 class="text-3xl">DËkkando</h1>
-        <h2 class="text-xl">Mon carnet de dettes</h2>
-    </div>
-    <h3>Bonjour,Boutique!</h3>
-    <p>voici la situation de tes desttes aujourd'hui</p>
-    <div>
+    <header class="bg-green-950  text-amber-100 flex justify-between h-24  items-center "> 
+        <div class="flex items-center gap-3">
+            <i class="fa-solid fa-shop text-4xl" ></i>
+            <div>
+                <h1 class="text-4xl font-bold">DËkkando</h1>
+                <h2 class="text-sm italic">Mon carnet de dettes</h2>
+            </div>
+        </div>
+        <div>
+            <ul class="flex flex-wrap gap-5 font-bold italic ">
+              <li><a href="clients.html">Clients</a></li> 
+              <li><a href="dettes.html">Dettes</a></li>
+              <li><a href="echeange.html">Echeanges</a></li>
+            </ul>
+        </div>
+    </header>
+    <h3 class="mt-7 text-5xl text-green-600">Bonjour,Boutique!</h3>
+    <p>voici la situation de tes dettes aujourd'hui</p>
+    <div class="flex justify-between">
+        <div>
+            <h2>total des dettes</h2>
+            <h2>125 000 F</h2>
+        </div>
+        <div>
+            <h2>montant recuperé</h2>
+            <h2>75 000 F</h2>
+        </div>
+        <div>
+            <h2>clients  endettés</h2>
+            <h2>12</h2>
+        </div>
+        <div>
+            <h2>echéances dépassées</h2>
+            <h2>3</h2>
+        </div>
 
-    </div>git
+    </div>
+    <div class="flex justify-between  bg-green-200 h-24 items-center px-5 mt-9">
+        <div class="flex items-center bg-green-900 rounded-xl h-13 w-56 text-white px-3">
+        <i class="fa-solid fa-user-plus"></i>   
+        <h2>Ajouter un client</h2>
+        </div>
+        <div class="flex items-center bg-white rounded-xl h-13 w-60 text-green-900 px-3">
+        <i class="fa-solid fa-money-bill-transfer"></i>
+        <h2>Enregistrer un remboursement</h2>
+        </div>
+        <div class="flex items-center bg-white rounded-xl h-13 w-56 text-green-900 px-3">
+        <i class="fa-solid fa-list-ul"></i>   
+        <h2>Voici les dettes</h2>
+        </div>
+        <div class="flex items-center  bg-white rounded-xl h-13 w-56 text-green-900 px-3">
+       <i class="fa-brands fa-whatsapp" ></i>   
+        <h2>Envoyer un rappel WhatsApp</h2>
+        </div>
+    </div>
+
+    
     
 </body>
 </html>
