@@ -11,20 +11,54 @@
     <!-- entête -->
     <header class="bg-green-950  text-amber-50 flex justify-between h-24  items-center px-4 "> 
         <div class="flex items-center gap-3">
-            <i class="fa-solid fa-shop text-4xl" ></i>
+            <i class="fa-solid fa-shop text-4xl text-amber-200"></i>
             <div>
                 <h1 class="text-4xl font-bold font-serif">DËkkando</h1>
                 <h2 class="text-sm italic">Mon carnet de dettes</h2>
             </div>
         </div>
-        <div>
-            <ul class="flex flex-wrap gap-5 font-bold italic  ">
-              <li><a href="clients.html">Clients</a></li> 
-              <li><a href="dettes.html">Dettes</a></li>
-              <li><a href="echeange.html">Echeanges</a></li>
+        <!-- menu ordinateur -->
+        <nav>
+            <ul class="flex flex-wrap gap-5 font-bold italic hidden md:flex gap-6  ">
+                <li>
+                    <a href="clients.html">Clients </a>
+                </li> 
+                <li>
+                    <a href="dettes.html">Dettes</a>
+                </li>
+                <li>
+                    <a href="echeange.html">Echeanges</a>
+                </li>
             </ul>
-        </div>
+        </nav>
+     <!-- BOUTON HAMBURGER -->
+        <button id="btnMenu" class="md:hidden text-2xl text-amber-200">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
     </header>
+
+    <!-- MENU MOBILE -->
+<nav id="menuMobile" class="hidden bg-green-950 text-amber-50 p-4 md:hidden">
+
+    <ul class="flex flex-col gap-4 font-bold italic">
+
+        <li>
+            <a href="clients.html" class="nav-link hover:text-amber-300 focus:text-amber-300 focus:outline-none">Clients</a>
+        </li>
+
+        <li>
+            <a href="dettes.html" class="nav-link hover:text-amber-300 focus:text-amber-300 focus:outline-none">Dettes</a>
+        </li>
+
+        <li>
+            <a href="echeange.html" class="nav-link hover:text-amber-300 focus:text-amber-300 focus:outline-none">Échanges</a>
+        </li>
+
+    </ul>
+</nav>
+<div>
     <h3 class="mt-7 text-5xl text-green-600 px-3 ">Bonjour,Boutique!</h3>
     <p class="font-serif mt-2 font-bold text-lg px-3 ">voici la situation de tes dettes aujourd'hui</p>
     <div class="flex gap-6 mt-7 px-4">
@@ -64,12 +98,12 @@
                 <h2>0</h2>
             </div>
         </div>
-
     </div>
+</div>
     <div class="flex justify-between  bg-green-200 h-24 items-center px-5 mt-9 mx-5 rounded-lg">
         <div class="flex items-center bg-green-900 rounded-xl h-13 w-64 text-white px-3 gap-3.5 font-serif ">
-            <i class="fa-solid fa-user-plus text-xl"></i>   
-            <h2 >Ajouter un client</h2>
+              <i class="fa-solid fa-user-plus text-xl"></i>   
+              <h2 >Ajouter un client</h2>
         </div>
         <div class="flex items-center bg-white rounded-xl h-13 w-64 text-green-900 px-2 gap-3.5 font-serif ">
             <i class="fa-solid fa-money-bill-transfer text-xl"></i>
@@ -135,15 +169,15 @@
                     <td class="px-3 py-1">
                         <div class="flex items-center gap-3">
                             <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-600 text-xs font-bold text-white">
-                                AB
+                                SD
                             </div>
 
                             <div>
                                 <p class="font-medium text-slate-700">
-                                    Aminata Ba
+                                    Sophie Diatta
                                 </p>
                                 <p class="mt-1 text-[10px] text-slate-500">
-                                    77 123 45 67
+                                    78 322 19 01
                                 </p>
                             </div>
                         </div>
@@ -172,10 +206,17 @@
 
                     <td class="px-3 py-2">
                         <div class="flex items-center gap-4">
-                            <button title="WhatsApp"
-                                class="flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-sm text-white hover:bg-green-700">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </button>
+                            <button
+                                    title="Envoyer un rappel WhatsApp"
+                                    class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-sm text-white hover:bg-green-700"
+                                    data-nom="Sophie Diatta"
+                                    data-telephone="221783221901"
+                                    data-produits="Lait, Savon, Dentifrice"
+                                    data-montant="32000">
+
+                                    <i class="fa-brands fa-whatsapp"></i>
+
+                                </button>
 
                             <button title="Modifier"
                                 class="text-xl text-blue-600 hover:text-blue-800">
@@ -196,13 +237,13 @@
                     <td class="px-3 py-1">
                         <div class="flex items-center gap-3">
                             <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-pink-500 font-bold text-white">
-                                DL
+                                BD
                             </div>
 
                             <div>
-                                <p class="font-medium">Diarra Laye</p>
+                                <p class="font-medium">Blandine Manga</p>
                                 <p class="mt-1 text-[10px] text-slate-500">
-                                    77 654 32 10
+                                    78 272 31 15
                                 </p>
                             </div>
                         </div>
@@ -211,7 +252,7 @@
                     <td class="px-3 py-2">
                         <p>Shampooing, Gel, Savon</p>
                         <p class="mt-1 text-[10px] text-slate-500">
-                            4 articles
+                            3 articles
                         </p>
                     </td>
 
@@ -231,8 +272,14 @@
 
                     <td class="px-3 py-2">
                         <div class="flex items-center gap-4">
-                            <button class="flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white">
+                            <button
+                                class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
+                                data-nom="Blandine Manga"
+                                data-telephone="221782723115"
+                                data-produits="Shampooing, Gel, Savon"
+                                data-montant="45000">
                                 <i class="fa-brands fa-whatsapp"></i>
+
                             </button>
                             <button class="text-xl text-blue-600">
                                 <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
@@ -248,20 +295,20 @@
                     <td class="px-3 py-1">
                         <div class="flex items-center gap-3">
                             <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-600 font-bold text-white">
-                                KF
+                                MN
                             </div>
 
                             <div>
-                                <p class="font-medium">Khadija Fall</p>
+                                <p class="font-medium">Moussa Ndoye</p>
                                 <p class="mt-1 text-[10px] text-slate-500">
-                                    76 987 65 43
+                                    77 278 14 05
                                 </p>
                             </div>
                         </div>
                     </td>
 
                     <td class="px-3 py-2">
-                        <p>Crème SOD, Huile</p>
+                        <p>Café cordycep, Huile huille</p>
                         <p class="mt-1 text-[10px] text-slate-500">
                             2 articles
                         </p>
@@ -283,8 +330,14 @@
 
                     <td class="px-3 py-2">
                         <div class="flex items-center gap-4">
-                            <button class="flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white">
+                            <button
+                                class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
+                                data-nom="Moussa Ndoye"
+                                data-telephone="221772781405"
+                                data-produits="café cordycep, huile 120ml"
+                                data-montant="28000">
                                 <i class="fa-brands fa-whatsapp"></i>
+
                             </button>
                             <button class="text-xl text-blue-600">
                                 <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
@@ -300,13 +353,13 @@
                     <td class="px-3 py-1">
                         <div class="flex items-center gap-3">
                             <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 font-bold text-white">
-                                MB
+                                KD
                             </div>
 
                             <div>
-                                <p class="font-medium">Mame Bousso</p>
+                                <p class="font-medium">Khadija Diatta</p>
                                 <p class="mt-1 text-[10px] text-slate-500">
-                                    77 111 22 33
+                                    77 082 88 45
                                 </p>
                             </div>
                         </div>
@@ -335,8 +388,14 @@
 
                     <td class="px-3 py-2">
                         <div class="flex items-center gap-4">
-                            <button class="flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white">
+                            <button
+                                class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
+                                data-nom="Khadija Diatta"
+                                data-telephone="221770828845"
+                                data-produits="Café, Thé, Savon noir"
+                                data-montant="50000">
                                 <i class="fa-brands fa-whatsapp"></i>
+
                             </button>
                             <button class="text-xl text-blue-600">
                                 <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
@@ -352,13 +411,13 @@
                     <td class="px-3 py-1">
                         <div class="flex items-center gap-3">
                             <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-500 font-bold text-white">
-                                SA
+                                DM
                             </div>
 
                             <div>
-                                <p class="font-medium">Sokhna Aïcha</p>
+                                <p class="font-medium">Deborah Manga</p>
                                 <p class="mt-1 text-[10px] text-slate-500">
-                                    78 222 33 44
+                                    78 101 64 55
                                 </p>
                             </div>
                         </div>
@@ -387,9 +446,16 @@
 
                     <td class="px-3 py-2">
                         <div class="flex items-center gap-4">
-                            <button class="flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white">
+                             <button
+                                class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
+                                data-nom="Deborah Manga"
+                                data-telephone="221781016455"
+                                data-produits="Déodorant, Lait de corps"
+                                data-montant="20000">
                                 <i class="fa-brands fa-whatsapp"></i>
+
                             </button>
+                            
                             <button class="text-xl text-blue-600">
                                 <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
                             </button>
@@ -404,13 +470,13 @@
                     <td class="px-3 py-1">
                         <div class="flex items-center gap-3">
                             <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 font-bold text-white">
-                                ND
+                                SM
                             </div>
 
                             <div>
-                                <p class="font-medium">Ndeye Diop</p>
+                                <p class="font-medium">Solange Manga</p>
                                 <p class="mt-1 text-[10px] text-slate-500">
-                                    77 333 44 55
+                                    78 992 77 81
                                 </p>
                             </div>
                         </div>
@@ -439,8 +505,14 @@
 
                     <td class="px-3 py-2">
                         <div class="flex items-center gap-4">
-                            <button class="flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white">
+                            <button
+                                class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
+                                data-nom="Solange Manga"
+                                data-telephone="221789927781"
+                                data-produits="Gel serpent, Savon bambou"
+                                data-montant="40000">
                                 <i class="fa-brands fa-whatsapp"></i>
+
                             </button>
                             <button class="text-xl text-blue-600">
                                 <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
@@ -453,6 +525,7 @@
             </tbody>
         </table>
     </div>
- 
+
+ <script src="scrip.js"></script>
 </body>
 </html>
