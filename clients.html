@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <title>Document</title>
 </head>
-<body>
+<body  class="bg-blue-50">
     <!-- entête -->
     <header class="bg-green-950  text-amber-50 flex justify-between h-24  items-center px-4 "> 
         <div class="flex items-center gap-3">
@@ -103,392 +103,396 @@
             </div>
         </div>
     </div>
-    <div class="w-full overflow-x-auto mt-6">
 
-        <div class="flex items-center bg-green-900 rounded-xl h-13 w-64 text-white px-3 gap-3.5 font-serif ">
+    <div class="mx-4">
+
+        <div class="flex items-center bg-green-900 rounded-xl h-13 w-64 text-white px-3 gap-3.5 font-serif mt-7">
               <i class="fa-solid fa-user-plus text-xl"></i>   
               <h2 >Ajouter un client</h2>
         </div>
-
-        <table class="w-full min-w-[850px] border-collapse text-xs mt-4 ">
-
-            <!-- EN-TÊTE -->
-            <thead class=" bg-green-100 h-8 px-2 rounded-xl items-center  font-serif">
-                <tr class="text-left text-sm font-bold font-serif">
-                    <th class="px-3 py-3">Client</th>
-                    <th class="px-3 py-3">Produits</th>
-                    <th class="px-3 py-3">Montant</th>
-                    <th class="px-3 py-3">Date</th>
-                    <th class="px-3 py-3">Statut</th>
-                    <th class="px-3 py-3">Actions</th>
-                </tr>
-            </thead>
-
-            <!-- CORPS DU TABLEAU -->
-            <tbody class="divide-y divide-slate-100">
-
-                <!-- CLIENT 1 -->
-                <tr class="h-12 hover:bg-slate-200">
-
-                    <td class="px-3 py-1">
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-600 text-xs font-bold text-white">
-                                SD
+        <div class="w-full overflow-x-auto mt-6 bg-white px-4 ">
+    
+    
+            <table class="w-full min-w-[850px] border-collapse text-xs mt-4 ">
+    
+                <!-- EN-TÊTE -->
+                <thead class=" bg-green-100 h-8 px-2 items-center  font-serif ">
+                    <tr class="text-left text-sm font-bold font-serif">
+                        <th class="px-3 py-3">Client</th>
+                        <th class="px-3 py-3">Produits</th>
+                        <th class="px-3 py-3">Montant</th>
+                        <th class="px-3 py-3">Date</th>
+                        <th class="px-3 py-3">Statut</th>
+                        <th class="px-3 py-3">Actions</th>
+                    </tr>
+                </thead>
+    
+                <!-- CORPS DU TABLEAU -->
+                <tbody class="divide-y divide-slate-100">
+    
+                    <!-- CLIENT 1 -->
+                    <tr class="h-12 hover:bg-slate-200">
+    
+                        <td class="px-3 py-1">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-violet-600 text-xs font-bold text-white">
+                                    SD
+                                </div>
+    
+                                <div>
+                                    <p class="font-medium text-slate-700">
+                                        Sophie Diatta
+                                    </p>
+                                    <p class="mt-1 text-[10px] text-slate-500">
+                                        78 322 19 01
+                                    </p>
+                                </div>
                             </div>
-
-                            <div>
-                                <p class="font-medium text-slate-700">
-                                    Sophie Diatta
-                                </p>
-                                <p class="mt-1 text-[10px] text-slate-500">
-                                    78 322 19 01
-                                </p>
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <p>Lait, Savon, Dentifrice</p>
+                            <p class="mt-1 text-[10px] text-slate-500">
+                                3 articles
+                            </p>
+                        </td>
+    
+                        <td class="px-3 py-2 font-semibold">
+                            32 000 FCFA
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            26/10/2025
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <span class="rounded-lg bg-orange-100 px-3 py-1.5 text-[10px] font-medium text-orange-600">
+                                À venir
+                            </span>
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <div class="flex items-center gap-4">
+                                    <button
+                                        title="Envoyer un rappel WhatsApp"
+                                        class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-sm text-white hover:bg-green-700"
+                                        data-nom="Sophie Diatta"
+                                        data-telephone="221783221901"
+                                        data-montant="32000">
+    
+                                        <i class="fa-brands fa-whatsapp"></i>
+    
+                                    </button>
+                                    <button title="Modifier"
+                                        class="text-xl text-blue-600 hover:text-blue-800">
+                                        <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
+                                    </button>
+    
+                                    <button title="Plus d'options"
+                                        class="font-bold tracking-widest text-slate-500">
+                                        ⋯
+                                    </button>
                             </div>
-                        </div>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <p>Lait, Savon, Dentifrice</p>
-                        <p class="mt-1 text-[10px] text-slate-500">
-                            3 articles
-                        </p>
-                    </td>
-
-                    <td class="px-3 py-2 font-semibold">
-                        32 000 FCFA
-                    </td>
-
-                    <td class="px-3 py-2">
-                        26/10/2025
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <span class="rounded-lg bg-orange-100 px-3 py-1.5 text-[10px] font-medium text-orange-600">
-                            À venir
-                        </span>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <div class="flex items-center gap-4">
+                        </td>
+                    </tr>
+    
+                    <!-- CLIENT 2 -->
+                    <tr class="h-12 hover:bg-slate-200">
+    
+                        <td class="px-3 py-1">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-pink-500 font-bold text-white">
+                                    BD
+                                </div>
+    
+                                <div>
+                                    <p class="font-medium">Blandine Manga</p>
+                                    <p class="mt-1 text-[10px] text-slate-500">
+                                        78 272 31 15
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <p>Shampooing, Gel, Savon</p>
+                            <p class="mt-1 text-[10px] text-slate-500">
+                                3 articles
+                            </p>
+                        </td>
+    
+                        <td class="px-3 py-2 font-semibold">
+                            45 000 FCFA
+                        </td>
+    
+                        <td class="px-3 py-2 font-medium text-red-500">
+                            25/10/2025
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <span class="rounded-lg bg-rose-100 px-3 py-1.5 text-[10px] font-medium text-rose-600">
+                                En retard
+                            </span>
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <div class="flex items-center gap-4">
                                 <button
-                                    title="Envoyer un rappel WhatsApp"
-                                    class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-sm text-white hover:bg-green-700"
-                                    data-nom="Sophie Diatta"
-                                    data-telephone="221783221901"
-                                    data-montant="32000">
-
+                                    class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
+                                    data-nom="Blandine Manga"
+                                    data-telephone="221782723115"
+                                    data-produits="Shampooing, Gel, Savon"
+                                    data-montant="45000">
                                     <i class="fa-brands fa-whatsapp"></i>
-
+    
                                 </button>
-                                <button title="Modifier"
-                                    class="text-xl text-blue-600 hover:text-blue-800">
+                                
+                                <button class="text-xl text-blue-600">
                                     <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
                                 </button>
-
-                                <button title="Plus d'options"
-                                    class="font-bold tracking-widest text-slate-500">
-                                    ⋯
+                                <button class="font-bold tracking-widest text-slate-500">⋯</button>
+                            </div>
+                        </td>
+                    </tr>
+    
+                    <!-- CLIENT 3 -->
+                    <tr class="h-12 hover:bg-slate-200">
+    
+                        <td class="px-3 py-1">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-600 font-bold text-white">
+                                    MN
+                                </div>
+    
+                                <div>
+                                    <p class="font-medium">Moussa ndoye</p>
+                                    <p class="mt-1 text-[10px] text-slate-500">
+                                        77 278 14 05
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <p>Café cordycep, Huile 120ml</p>
+                            <p class="mt-1 text-[10px] text-slate-500">
+                                2 articles
+                            </p>
+                        </td>
+    
+                        <td class="px-3 py-2 font-semibold">
+                            28 000 FCFA
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            28/10/2025
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <span class="rounded-lg bg-orange-100 px-3 py-1.5 text-[10px] font-medium text-orange-600">
+                                À venir
+                            </span>
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <div class="flex items-center gap-4">
+                                <button
+                                    class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
+                                    data-nom="Blandine Manga"
+                                    data-telephone="221772781405"
+                                    data-produits="Café cordycep, Huile 120ml"
+                                    data-montant="28000">
+                                    <i class="fa-brands fa-whatsapp"></i>
+    
                                 </button>
-                        </div>
-                    </td>
-                </tr>
-
-                <!-- CLIENT 2 -->
-                <tr class="h-12 hover:bg-slate-200">
-
-                    <td class="px-3 py-1">
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-pink-500 font-bold text-white">
-                                BD
+                                <button class="text-xl text-blue-600">
+                                    <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
+                                </button>
+                                <button class="font-bold tracking-widest text-slate-500">⋯</button>
                             </div>
-
-                            <div>
-                                <p class="font-medium">Blandine Manga</p>
-                                <p class="mt-1 text-[10px] text-slate-500">
-                                    78 272 31 15
-                                </p>
+                        </td>
+                    </tr>
+    
+                    <!-- CLIENT 4 -->
+                    <tr class="h-12 hover:bg-slate-200">
+    
+                        <td class="px-3 py-1">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 font-bold text-white">
+                                    KD
+                                </div>
+    
+                                <div>
+                                    <p class="font-medium">Mame Bousso</p>
+                                    <p class="mt-1 text-[10px] text-slate-500">
+                                        780828845
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <p>Shampooing, Gel, Savon</p>
-                        <p class="mt-1 text-[10px] text-slate-500">
-                            3 articles
-                        </p>
-                    </td>
-
-                    <td class="px-3 py-2 font-semibold">
-                        45 000 FCFA
-                    </td>
-
-                    <td class="px-3 py-2 font-medium text-red-500">
-                        25/10/2025
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <span class="rounded-lg bg-rose-100 px-3 py-1.5 text-[10px] font-medium text-rose-600">
-                            En retard
-                        </span>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <div class="flex items-center gap-4">
-                            <button
-                                class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
-                                data-nom="Blandine Manga"
-                                data-telephone="221782723115"
-                                data-produits="Shampooing, Gel, Savon"
-                                data-montant="45000">
-                                <i class="fa-brands fa-whatsapp"></i>
-
-                            </button>
-                            
-                            <button class="text-xl text-blue-600">
-                                <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
-                            </button>
-                            <button class="font-bold tracking-widest text-slate-500">⋯</button>
-                        </div>
-                    </td>
-                </tr>
-
-                <!-- CLIENT 3 -->
-                <tr class="h-12 hover:bg-slate-200">
-
-                    <td class="px-3 py-1">
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-teal-600 font-bold text-white">
-                                MN
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <p>Café, Thé, Savon noir</p>
+                            <p class="mt-1 text-[10px] text-slate-500">
+                                3 articles
+                            </p>
+                        </td>
+    
+                        <td class="px-3 py-2 font-semibold">
+                            50 000 FCFA
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            30/10/2025
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <span class="rounded-lg bg-orange-100 px-3 py-1.5 text-[10px] font-medium text-orange-600">
+                                À venir
+                            </span>
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <div class="flex items-center gap-4">
+                                <button
+                                    class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
+                                    data-nom="Khadija Diatta"
+                                    data-telephone="221770828845"
+                                    data-produits="Café, Thé, Savon noir"
+                                    data-montant="50000">
+                                    <i class="fa-brands fa-whatsapp"></i>
+    
+                                </button>
+                                
+                                <button class="text-xl text-blue-600">
+                                    <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
+                                </button>
+                                <button class="font-bold tracking-widest text-slate-500">⋯</button>
                             </div>
-
-                            <div>
-                                <p class="font-medium">Moussa ndoye</p>
-                                <p class="mt-1 text-[10px] text-slate-500">
-                                    77 278 14 05
-                                </p>
+                        </td>
+                    </tr>
+    
+                    <!-- CLIENT 5 -->
+                    <tr class="h-12 hover:bg-slate-200">
+    
+                        <td class="px-3 py-1">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-500 font-bold text-white">
+                                    DM
+                                </div>
+    
+                                <div>
+                                    <p class="font-medium">Sokhna Aïcha</p>
+                                    <p class="mt-1 text-[10px] text-slate-500">
+                                        78 101 64 55
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <p>Café cordycep, Huile 120ml</p>
-                        <p class="mt-1 text-[10px] text-slate-500">
-                            2 articles
-                        </p>
-                    </td>
-
-                    <td class="px-3 py-2 font-semibold">
-                        28 000 FCFA
-                    </td>
-
-                    <td class="px-3 py-2">
-                        28/10/2025
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <span class="rounded-lg bg-orange-100 px-3 py-1.5 text-[10px] font-medium text-orange-600">
-                            À venir
-                        </span>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <div class="flex items-center gap-4">
-                            <button
-                                class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
-                                data-nom="Blandine Manga"
-                                data-telephone="221772781405"
-                                data-produits="Café cordycep, Huile 120ml"
-                                data-montant="28000">
-                                <i class="fa-brands fa-whatsapp"></i>
-
-                            </button>
-                            <button class="text-xl text-blue-600">
-                                <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
-                            </button>
-                            <button class="font-bold tracking-widest text-slate-500">⋯</button>
-                        </div>
-                    </td>
-                </tr>
-
-                <!-- CLIENT 4 -->
-                <tr class="h-12 hover:bg-slate-200">
-
-                    <td class="px-3 py-1">
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-600 font-bold text-white">
-                                KD
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <p>Déodorant, Lait de corps</p>
+                            <p class="mt-1 text-[10px] text-slate-500">
+                                2 articles
+                            </p>
+                        </td>
+    
+                        <td class="px-3 py-2 font-semibold">
+                            20 000 FCFA
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            31/10/2025
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <span class="rounded-lg bg-orange-100 px-3 py-1.5 text-[10px] font-medium text-orange-600">
+                                À venir
+                            </span>
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <div class="flex items-center gap-4">
+                                <button
+                                    class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
+                                    data-nom="Deborah Manga"
+                                    data-telephone="221781016455"
+                                    data-produits="Déodorant, Lait de corps"
+                                    data-montant="20000">
+                                    <i class="fa-brands fa-whatsapp"></i>
+    
+                                </button>
+                                
+                                <button class="text-xl text-blue-600">
+                                    <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
+                                </button>
+                                <button class="font-bold tracking-widest text-slate-500">⋯</button>
                             </div>
-
-                            <div>
-                                <p class="font-medium">Mame Bousso</p>
-                                <p class="mt-1 text-[10px] text-slate-500">
-                                    780828845
-                                </p>
+                        </td>
+                    </tr>
+    
+                    <!-- CLIENT 6 -->
+                    <tr class="h-12 hover:bg-slate-200">
+    
+                        <td class="px-3 py-1">
+                            <div class="flex items-center gap-3">
+                                <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 font-bold text-white">
+                                    SM
+                                </div>
+    
+                                <div>
+                                    <p class="font-medium">Solange Manga</p>
+                                    <p class="mt-1 text-[10px] text-slate-500">
+                                        78 992 77 81
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <p>Café, Thé, Savon noir</p>
-                        <p class="mt-1 text-[10px] text-slate-500">
-                            3 articles
-                        </p>
-                    </td>
-
-                    <td class="px-3 py-2 font-semibold">
-                        50 000 FCFA
-                    </td>
-
-                    <td class="px-3 py-2">
-                        30/10/2025
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <span class="rounded-lg bg-orange-100 px-3 py-1.5 text-[10px] font-medium text-orange-600">
-                            À venir
-                        </span>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <div class="flex items-center gap-4">
-                            <button
-                                class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
-                                data-nom="Khadija Diatta"
-                                data-telephone="221770828845"
-                                data-produits="Café, Thé, Savon noir"
-                                data-montant="50000">
-                                <i class="fa-brands fa-whatsapp"></i>
-
-                            </button>
-                            
-                            <button class="text-xl text-blue-600">
-                                <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
-                            </button>
-                            <button class="font-bold tracking-widest text-slate-500">⋯</button>
-                        </div>
-                    </td>
-                </tr>
-
-                <!-- CLIENT 5 -->
-                <tr class="h-12 hover:bg-slate-200">
-
-                    <td class="px-3 py-1">
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-purple-500 font-bold text-white">
-                                DM
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <p>Gel serpent, Savon bambou</p>
+                            <p class="mt-1 text-[10px] text-slate-500">
+                                2 articles
+                            </p>
+                        </td>
+    
+                        <td class="px-3 py-2 font-semibold">
+                            40 000 FCFA
+                        </td>
+    
+                        <td class="px-3 py-2 font-medium text-red-500">
+                            20/10/2025
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <span class="rounded-lg bg-rose-100 px-3 py-1.5 text-[10px] font-medium text-rose-600">
+                                En retard
+                            </span>
+                        </td>
+    
+                        <td class="px-3 py-2">
+                            <div class="flex items-center gap-4">
+                                <button
+                                    class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
+                                    data-nom="Solange Manga"
+                                    data-telephone="221781016455"
+                                    data-produits="Gel serpent, Savon bambou"
+                                    data-montant="40000">
+                                    <i class="fa-brands fa-whatsapp"></i>
+    
+                                </button>
+                                
+                                <button class="text-xl text-blue-600">
+                                    <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
+                                </button>
+                                <button class="font-bold tracking-widest text-slate-500">⋯</button>
                             </div>
-
-                            <div>
-                                <p class="font-medium">Sokhna Aïcha</p>
-                                <p class="mt-1 text-[10px] text-slate-500">
-                                    78 101 64 55
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <p>Déodorant, Lait de corps</p>
-                        <p class="mt-1 text-[10px] text-slate-500">
-                            2 articles
-                        </p>
-                    </td>
-
-                    <td class="px-3 py-2 font-semibold">
-                        20 000 FCFA
-                    </td>
-
-                    <td class="px-3 py-2">
-                        31/10/2025
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <span class="rounded-lg bg-orange-100 px-3 py-1.5 text-[10px] font-medium text-orange-600">
-                            À venir
-                        </span>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <div class="flex items-center gap-4">
-                            <button
-                                class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
-                                data-nom="Deborah Manga"
-                                data-telephone="221781016455"
-                                data-produits="Déodorant, Lait de corps"
-                                data-montant="20000">
-                                <i class="fa-brands fa-whatsapp"></i>
-
-                            </button>
-                            
-                            <button class="text-xl text-blue-600">
-                                <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
-                            </button>
-                            <button class="font-bold tracking-widest text-slate-500">⋯</button>
-                        </div>
-                    </td>
-                </tr>
-
-                <!-- CLIENT 6 -->
-                <tr class="h-12 hover:bg-slate-200">
-
-                    <td class="px-3 py-1">
-                        <div class="flex items-center gap-3">
-                            <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 font-bold text-white">
-                                SM
-                            </div>
-
-                            <div>
-                                <p class="font-medium">Solange Manga</p>
-                                <p class="mt-1 text-[10px] text-slate-500">
-                                    78 992 77 81
-                                </p>
-                            </div>
-                        </div>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <p>Gel serpent, Savon bambou</p>
-                        <p class="mt-1 text-[10px] text-slate-500">
-                            2 articles
-                        </p>
-                    </td>
-
-                    <td class="px-3 py-2 font-semibold">
-                        40 000 FCFA
-                    </td>
-
-                    <td class="px-3 py-2 font-medium text-red-500">
-                        20/10/2025
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <span class="rounded-lg bg-rose-100 px-3 py-1.5 text-[10px] font-medium text-rose-600">
-                            En retard
-                        </span>
-                    </td>
-
-                    <td class="px-3 py-2">
-                        <div class="flex items-center gap-4">
-                            <button
-                                class="whatsapp-btn flex h-7 w-7 items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700"
-                                data-nom="Solange Manga"
-                                data-telephone="221781016455"
-                                data-produits="Gel serpent, Savon bambou"
-                                data-montant="40000">
-                                <i class="fa-brands fa-whatsapp"></i>
-
-                            </button>
-                            
-                            <button class="text-xl text-blue-600">
-                                <i class="fa-solid fa-pencil scale-x-[-1]" style="color: rgb(229, 222, 239);"></i>
-                            </button>
-                            <button class="font-bold tracking-widest text-slate-500">⋯</button>
-                        </div>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
+                        </td>
+                    </tr>
+    
+                </tbody>
+            </table>
+        </div>
     </div>
 
  <script src="scrip.js"></script>
