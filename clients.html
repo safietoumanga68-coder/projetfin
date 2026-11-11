@@ -106,10 +106,118 @@
 
     <div class="mx-4">
 
-        <div class="flex items-center bg-green-900 rounded-xl h-13 w-64 text-white px-3 gap-3.5 font-serif mt-7">
-              <i class="fa-solid fa-user-plus text-xl"></i>   
-              <h2 >Ajouter un client</h2>
-        </div>
+        <button id="btnAjouterClient" class="flex items-center bg-green-900 rounded-xl h-13 w-64 text-white px-3 gap-3.5 font-serif mt-7">
+                <i class="fa-solid fa-user-plus text-xl"></i>   
+                <h2 >Ajouter un client</h2>
+        </button>
+        <!-- Formulaire client -->
+    <div id="formulaireClient" class="hidden bg-white shadow-lg rounded-xl p-6 mt-5 w-full max-w-md">
+
+        <h2 class="text-2xl font-bold text-green-900 mb-5">
+            Nouveau client
+        </h2>
+
+        <form id="formClient" class="flex flex-col gap-4">
+
+            <!-- Prénom -->
+            <div>
+                <label class="block font-semibold mb-1">Prénom</label>
+
+                <input type="text"
+                    id="prenom"
+                    placeholder="Entrer le prénom"
+                    required
+                    class="w-full border border-gray-300 rounded-lg p-3">
+            </div>
+
+            <!-- Nom -->
+            <div>
+                <label class="block font-semibold mb-1">Nom</label>
+
+                <input type="text"
+                    id="nom"
+                    placeholder="Entrer le nom"
+                    required
+                    class="w-full border border-gray-300 rounded-lg p-3">
+            </div>
+
+            <!-- Date -->
+            <div>
+                <label class="block font-semibold mb-1">Date</label>
+
+                <input type="date"
+                    id="date"
+                    required
+                    class="w-full border border-gray-300 rounded-lg p-3">
+            </div>
+
+            <!-- Numéro -->
+            <div>
+                <label class="block font-semibold mb-1">Numéro de téléphone</label>
+
+                <input type="tel"
+                    id="telephone"
+                    placeholder="Ex : 771234567"
+                    required
+                    class="w-full border border-gray-300 rounded-lg p-3">
+            </div>
+
+            <!-- Produit -->
+            <div>
+                <label class="block font-semibold mb-1">Produit acheté</label>
+
+                <input type="text"
+                    id="produit"
+                    required
+                    placeholder="Ex : Savon bambou"
+                    class="w-full border rounded-lg p-3">
+            </div>
+
+            <!-- Quantité -->
+            <div>
+                <label class="block font-semibold mb-1">Quantité</label>
+
+                <input type="number"
+                    id="quantite"
+                    min="1"
+                    value="1"
+                    required
+                    class="w-full border rounded-lg p-3">
+            </div>
+
+            <!-- Montant -->
+            <div>
+                <label class="block font-semibold mb-1">Montant à payer (FCFA)</label>
+
+                <input type="number"
+                    id="montant"
+                    min="0"
+                    required
+                    placeholder="Ex : 32000"
+                    class="w-full border rounded-lg p-3">
+            </div>
+
+            <!-- Boutons -->
+            <div class="flex gap-3 mt-3">
+
+                <button type="submit"
+                    class="bg-green-900 text-white px-5 py-3 rounded-lg">
+                Enregistrer
+                </button>
+
+                <button type="button"
+                    id="btnFermer"
+                    class="bg-gray-200 px-5 py-3 rounded-lg">
+                    Annuler
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
         <div class="w-full overflow-x-auto mt-6 bg-white px-4 ">
     
     
@@ -128,7 +236,7 @@
                 </thead>
     
                 <!-- CORPS DU TABLEAU -->
-                <tbody class="divide-y divide-slate-100">
+                <tbody id="listeClient" class="divide-y divide-slate-100">
     
                     <!-- CLIENT 1 -->
                     <tr class="h-12 hover:bg-slate-200">
