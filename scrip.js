@@ -1,3 +1,4 @@
+// menu bar
 const btnMenu = document.getElementById("btnMenu");
 
 const menuMobile = document.getElementById("menuMobile");
@@ -7,7 +8,7 @@ btnMenu.addEventListener("click", function() {
     menuMobile.classList.toggle("hidden");
 
 });
-// LIENS ACTIFS
+// LIENS ACTIFS fonction du button watsap
 
 const liens = document.querySelectorAll(".nav-link");
 
@@ -48,107 +49,120 @@ Merci pour votre confiance.`;
 
 });
 
-// Récupérer les éléments/formulaire
 const btnAjouterClient = document.getElementById("btnAjouterClient");
-
 const formulaireClient = document.getElementById("formulaireClient");
-
 const btnFermer = document.getElementById("btnFermer");
 
-const formClient = document.getElementById("formClient");
+if (btnAjouterClient && formulaireClient && btnFermer) {
 
-const listeClients = document.getElementById("listeClients");
+    // Ouvrir le formulaire
+    btnAjouterClient.addEventListener("click", function() {
+
+        formulaireClient.classList.remove("hidden");
+        formulaireClient.classList.add("flex");
+
+    });
+
+    // Fermer le formulaire
+    btnFermer.addEventListener("click", function() {
+
+        formulaireClient.classList.add("hidden");
+        formulaireClient.classList.remove("flex");
+
+    });
+
+}
 
 
-// Afficher le formulaire
-btnAjouterClient.addEventListener("click", function() {
+// Fermer en cliquant sur le fond sombre
+formulaireClient.addEventListener("click", function(event) {
 
-    formulaireClient.classList.toggle("hidden");
+    if (event.target === formulaireClient) {
+
+        formulaireClient.classList.add("hidden");
+        formulaireClient.classList.remove("flex");
+
+    }
 
 });
 
 
-// Fermer le formulaire
-btnFermer.addEventListener("click", function() {
+// Récupérer les clients enregistrés
+let clients = JSON.parse(localStorage.getItem("clients")) || [];
 
-    formulaireClient.classList.add("hidden");
 
-});
+// Fonction pour afficher les clients
+function afficherClients() {
+
+    if (!listeClients) return;
+
+    listeClients.innerHTML = "";
+
+    clients.forEach(function(client) {
+
+        const nouvelleLigne = document.createElement("tr");
+
+        nouvelleLigne.className = "border-b";
+
+        nouvelleLigne.innerHTML = `
+            <td class="p-3">${client.prenom} ${client.nom}</td>
+            <td class="p-3">${client.telephone}</td>
+            <td class="p-3">${client.produit}</td>
+            <td class="p-3">${client.quantite}</td>
+            <td class="p-3">${Number(client.montant).toLocaleString("fr-FR")} FCFA</td>
+            <td class="p-3">${client.date}</td>
+        `;
+
+        listeClients.appendChild(nouvelleLigne);
+
+    });
+
+}
 
 
 // Enregistrer le client
-formClient.addEventListener("submit", function(event) {
+if (formClient) {
 
-    event.preventDefault();
+    formClient.addEventListener("submit", function(event) {
 
-    // Récupérer les informations
-    const prenom = document.getElementById("prenom").value;
+        event.preventDefault();
 
-    const nom = document.getElementById("nom").value;
+        const nouveauClient = {
 
-    const date = document.getElementById("date").value;
+            prenom: document.getElementById("prenom").value,
+            nom: document.getElementById("nom").value,
+            date: document.getElementById("date").value,
+            telephone: document.getElementById("telephone").value,
+            produit: document.getElementById("produit").value,
+            quantite: document.getElementById("quantite").value,
+            montant: document.getElementById("montant").value
 
-    const telephone = document.getElementById("telephone").value;
+        };
 
-    const produit = document.getElementById("produit").value;
+        // Ajouter le nouveau client
+        clients.push(nouveauClient);
 
-    const quantite = document.getElementById("quantite").value;
+        // Enregistrer dans localStorage
+        localStorage.setItem("clients", JSON.stringify(clients));
 
-    const montant = document.getElementById("montant").value;
+        // Actualiser le tableau
+        afficherClients();
 
+        alert("Client ajouté avec succès !");
 
-    // Créer une nouvelle ligne
-    const nouvelleLigne = document.createElement("tr");
+        // Vider le formulaire
+        formClient.reset();
 
-    nouvelleLigne.className = "border-b";
+        // Fermer le POP-UP
+        formulaireClient.classList.add("hidden");
+        formulaireClient.classList.remove("flex");
 
+    });
 
-    // Ajouter les informations dans la ligne
-    nouvelleLigne.innerHTML = `
-    
-        <td class="p-3">
-            ${prenom} ${nom}
-        </td>
-
-        <td class="p-3">
-            ${telephone}
-        </td>
-
-        <td class="p-3">
-            ${produit}
-        </td>
-
-        <td class="p-3">
-            ${quantite}
-        </td>
-
-        <td class="p-3">
-            ${Number(montant).toLocaleString("fr-FR")} FCFA
-        </td>
-
-        <td class="p-3">
-            ${date}
-        </td>
-
-    `;
+}
 
 
-    // Ajouter le client dans le tableau
-    listeClients.appendChild(nouvelleLigne);
-
-
-    // Message
-    alert("Client ajouté avec succès !");
-
-
-    // Vider le formulaire
-    formClient.reset();
-
-
-    // Fermer le formulaire
-    formulaireClient.classList.add("hidden");
-
-});
-
+// Afficher les clients au chargement de la page
+afficherClients();
 
 
